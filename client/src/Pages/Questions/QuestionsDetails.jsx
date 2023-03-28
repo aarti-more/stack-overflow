@@ -82,7 +82,7 @@ const QuestionsDetails=()=>
     const User=useSelector((state)=>(state.currentUserReducer))
     const location=useLocation()
     const Navigate=useNavigate()
-    const url='http://localhost:3000'
+    const url='https://stack-overflow-aarti.netlify.app'
     const handlePostAns=(e,answerLength)=>{
         e.preventDefault()
         if(User===null)
