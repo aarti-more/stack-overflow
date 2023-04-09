@@ -26,7 +26,7 @@ const UsersProfile = () => {
                     <div className='user-detail-container'>
                         <div className='user-detail'>
                             <Avatar backgroundColor='purple' color='white' fontSize='50px' px='40px' py='30px'>
-                                {currentProfile.name.charAt(0).toUpperCase()}
+                                {currentProfile?.name.charAt(0).toUpperCase()}
                             </Avatar>
 
                             <div className='user-name'>
@@ -35,7 +35,7 @@ const UsersProfile = () => {
                             </div>
                         </div>
                         {
-                            currentUser.result._id===id && (
+                            currentUser?.result._id===id && (
                                 <button type="button" onClick={()=>setSwitch(true)} className='edit-profile-btn'>
                                 <FontAwesomeIcon icon={faPen}/> Edit Profile
                                 </button>
