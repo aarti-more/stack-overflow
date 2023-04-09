@@ -23,7 +23,7 @@ export const fetchAllQuestions=()=>async(dispatch)=>{
 export const deleteQuestion=(id,navigate)=>async(dispatch)=>{
     try{
         await api.deleteQuestion(id)
-        dispatch(fetchAllQuestions)
+        dispatch(fetchAllQuestions())
         navigate('/')
     }catch(error){
 
@@ -45,7 +45,7 @@ export const postAnswer=(answerdata)=>async(dispatch)=>{
 export const deleteAnswer=(id,answerId,noOfAnswers)=>async(dispatch)=>{
     try{
 await api.deleteAnswer(id, answerId, noOfAnswers)
-dispatch(fetchAllQuestions)
+dispatch(fetchAllQuestions())
     }catch(error){
        console.log(error) 
     }
@@ -54,7 +54,7 @@ dispatch(fetchAllQuestions)
 export const voteQuestion=(id,value,userId)=>async(dispatch)=>{
     try{
     await api.voteQuestion(id, value)
-    dispatch(fetchAllQuestions)
+    dispatch(fetchAllQuestions())
     }catch(error){
         console.log(error)  
     }
